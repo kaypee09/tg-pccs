@@ -38,6 +38,9 @@ resource azurerm_app_service "app-service1" {
     git_repo             = "terragoat"
     yor_trace            = "20163505-c921-43bf-a6ce-4dbcf50a4406"
   }
+  logs {
+    failed_request_tracing_enabled = true
+  }
 }
 
 resource azurerm_app_service "app-service2" {
@@ -59,6 +62,9 @@ resource azurerm_app_service "app-service2" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "1c004765-6fe5-4bcb-9035-553f46ad4bb4"
+  }
+  logs {
+    detailed_error_messages_enabled = true
   }
 }
 
